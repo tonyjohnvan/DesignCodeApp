@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  DesignCodeApp
 //
-//  Created by fanzhang on 9/12/18.
-//  Copyright © 2018 fanzhang. All rights reserved.
+//  Created by Meng To on 11/14/17.
+//  Copyright © 2017 Meng To. All rights reserved.
 //
 
 import UIKit
