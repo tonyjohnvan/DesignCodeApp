@@ -310,7 +310,7 @@ design and code an iOS 11 app.</string>
                                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="EHD-Pe-biB">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="EHD-Pe-biB" customClass="SectionCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="304" height="248"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -390,6 +390,11 @@ design and code an iOS 11 app.</string>
                                                             <constraint firstAttribute="trailing" secondItem="Vt1-dP-x5A" secondAttribute="trailing" id="dKc-6S-o3e"/>
                                                         </constraints>
                                                         <size key="customSize" width="304" height="248"/>
+                                                        <connections>
+                                                            <outlet property="captionLabel" destination="ryy-Ba-zzJ" id="M4m-Rc-TvN"/>
+                                                            <outlet property="coverImageView" destination="ujD-Gh-2Ce" id="qH0-wn-CAH"/>
+                                                            <outlet property="titleLabel" destination="gic-V0-PEI" id="fKa-nB-bwR"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
