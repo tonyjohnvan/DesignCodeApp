@@ -21,11 +21,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="88Z-Eg-183">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugQ-UG-w1A" userLabel="Hero View">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugQ-UG-w1A" userLabel="Hero View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="4MO-Rt-Nfc">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
+                                                <rect key="frame" x="0.0" y="-50" width="375" height="502"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn to design &amp; code for iOS 11" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8V-AD-Sfa">
                                                 <rect key="frame" x="38" y="106" width="160" height="172"/>
@@ -235,7 +235,7 @@
                                             <constraint firstAttribute="bottom" secondItem="msa-eJ-Mjx" secondAttribute="bottom" id="YQJ-Ry-0tZ"/>
                                             <constraint firstItem="rpF-Np-hKC" firstAttribute="centerY" secondItem="gsw-i8-LeU" secondAttribute="centerY" constant="-11.5" id="k89-Dh-fbm"/>
                                             <constraint firstAttribute="bottom" secondItem="4MO-Rt-Nfc" secondAttribute="bottom" id="pf5-NF-HlT"/>
-                                            <constraint firstItem="4MO-Rt-Nfc" firstAttribute="top" secondItem="ugQ-UG-w1A" secondAttribute="top" id="wMi-fP-EQ9"/>
+                                            <constraint firstItem="4MO-Rt-Nfc" firstAttribute="top" secondItem="ugQ-UG-w1A" secondAttribute="top" constant="-50" id="wMi-fP-EQ9"/>
                                             <constraint firstItem="gsw-i8-LeU" firstAttribute="leading" secondItem="I8V-AD-Sfa" secondAttribute="trailing" constant="4" id="xGk-5P-RQS"/>
                                             <constraint firstItem="4MO-Rt-Nfc" firstAttribute="leading" secondItem="ugQ-UG-w1A" secondAttribute="leading" id="zJo-JD-Wc9"/>
                                         </constraints>
@@ -344,8 +344,12 @@ design and code an iOS 11 app.</string>
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="4MO-Rt-Nfc" id="XEO-16-R1O"/>
+                        <outlet property="bookView" destination="jcI-DP-diU" id="bN8-jv-YcT"/>
                         <outlet property="deviceImage" destination="gsw-i8-LeU" id="lhP-kf-96j"/>
+                        <outlet property="heroView" destination="ugQ-UG-w1A" id="rse-Sd-J8H"/>
                         <outlet property="playVisualEffectView" destination="rpF-Np-hKC" id="OGq-fU-UxI"/>
+                        <outlet property="scrollView" destination="88Z-Eg-183" id="nt3-kT-44z"/>
                         <outlet property="titleLabel" destination="I8V-AD-Sfa" id="WDj-oW-T1y"/>
                     </connections>
                 </viewController>
