@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImage: UIImageView!
     @IBOutlet weak var playVisualEffectView: UIVisualEffectView!
@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         
         scrollView.delegate = self
@@ -50,6 +54,8 @@ class ViewController: UIViewController {
             self.deviceImage.alpha = 1
             self.playVisualEffectView.alpha = 1
         }
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,7 +74,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections.count
@@ -90,9 +96,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
+        
+        // Hero Section Animations
         if offsetY < 0 {
             heroView.transform = CGAffineTransform(translationX: 0, y: offsetY)
             
@@ -116,6 +124,10 @@ extension ViewController: UIScrollViewDelegate {
                 cell.layer.transform = animateCell(cellFrame: cellFrame)
             }
         }
+        
+        //NavigationBar Behavior
+        let navigationIsHidden = offsetY <= 0
+        navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
     }
     
     func animateCell(cellFrame: CGRect) -> CATransform3D {
