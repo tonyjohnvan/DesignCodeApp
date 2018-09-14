@@ -656,7 +656,7 @@ design and code an iOS 11 app.</string>
             </objects>
             <point key="canvasLocation" x="2909.5999999999999" y="-305.17241379310349"/>
         </scene>
-        <!--Chapters-->
+        <!--View Controller-->
         <scene sceneID="fgF-k3-gMh">
             <objects>
                 <viewController id="75j-3a-kqu" sceneMemberID="viewController">
@@ -666,11 +666,11 @@ design and code an iOS 11 app.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vrj-Aj-eNc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" selectedImage="Tab Bar/chapters-active" id="jnW-zF-wx0"/>
+                    <navigationItem key="navigationItem" id="zw4-wL-fY7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYj-Fk-vB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3869.5999999999999" y="-305.17241379310349"/>
+            <point key="canvasLocation" x="3870" y="416"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="JWU-fH-wju">
@@ -699,7 +699,7 @@ design and code an iOS 11 app.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHl-uy-hMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4725.6000000000004" y="-305.17241379310349"/>
+            <point key="canvasLocation" x="4807" y="-305"/>
         </scene>
         <!--Item-->
         <scene sceneID="pLG-B3-05u">
@@ -728,7 +728,7 @@ design and code an iOS 11 app.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qP-Sw-f4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5573.6000000000004" y="-305.17241379310349"/>
+            <point key="canvasLocation" x="5655" y="-305"/>
         </scene>
         <!--More-->
         <scene sceneID="vqT-3K-x9t">
@@ -920,7 +920,7 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tva-Db-GT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6408.8000000000002" y="-305.17241379310349"/>
+            <point key="canvasLocation" x="6490" y="-305"/>
         </scene>
         <!--Testimonial View Controller-->
         <scene sceneID="LVe-by-7rs">
@@ -1144,7 +1144,7 @@ design and code an iOS 11 app.</string>
                     </tabBar>
                     <connections>
                         <segue destination="adU-HC-A1j" kind="relationship" relationship="viewControllers" id="aNk-s2-nY6"/>
-                        <segue destination="75j-3a-kqu" kind="relationship" relationship="viewControllers" id="pyg-Zv-zO6"/>
+                        <segue destination="8aq-Zb-kHc" kind="relationship" relationship="viewControllers" id="pyg-Zv-zO6"/>
                         <segue destination="SgE-ok-9AQ" kind="relationship" relationship="viewControllers" id="Jbf-nb-t1C"/>
                         <segue destination="bd0-Pj-nrF" kind="relationship" relationship="viewControllers" id="LFV-H4-LF8"/>
                         <segue destination="9jX-ab-Dt4" kind="relationship" relationship="viewControllers" id="63G-9p-iJk"/>
@@ -1172,6 +1172,25 @@ design and code an iOS 11 app.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38j-wK-JW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1158" y="-305"/>
+        </scene>
+        <!--Chapters-->
+        <scene sceneID="dvW-xC-JSb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8aq-Zb-kHc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" selectedImage="Tab Bar/chapters-active" id="jnW-zF-wx0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RDp-bl-FlW">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="75j-3a-kqu" kind="relationship" relationship="rootViewController" id="Etk-dl-mEw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09h-Z7-KIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3869.5999999999999" y="-305.17241379310349"/>
         </scene>
     </scenes>
     <resources>

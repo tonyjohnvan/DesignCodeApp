@@ -56,6 +56,8 @@ class HomeViewController: UIViewController {
         }
         
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+//        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.1857388616, blue: 0.5733950138, alpha: 0.5)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
