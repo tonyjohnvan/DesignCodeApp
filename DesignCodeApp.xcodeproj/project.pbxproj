@@ -15,6 +15,8 @@
 		9698CD2C1FBB5DE000501C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */; };
 		BE007FC2214A2D49001205D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE007FC1214A2D49001205D7 /* Data.swift */; };
 		BE007FC4214A2DBF001205D7 /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE007FC3214A2DBF001205D7 /* SectionCollectionViewCell.swift */; };
+		BE95E000214B5B8900391597 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */; };
+		BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9698CD2D1FBB5DE000501C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE007FC1214A2D49001205D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BE007FC3214A2DBF001205D7 /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
+		BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				BE007FC1214A2D49001205D7 /* Data.swift */,
 				BE007FC3214A2DBF001205D7 /* SectionCollectionViewCell.swift */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
+				BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */,
+				BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */,
 				9698CD281FBB5DE000501C47 /* Assets.xcassets */,
 				9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */,
 				9698CD2D1FBB5DE000501C47 /* Info.plist */,
@@ -147,8 +153,10 @@
 			files = (
 				9698CD211FBB5DE000501C47 /* ViewController.swift in Sources */,
 				BE007FC4214A2DBF001205D7 /* SectionCollectionViewCell.swift in Sources */,
+				BE95E000214B5B8900391597 /* TestimonialViewController.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				9698CD271FBB5DE000501C47 /* DesignCodeApp.xcdatamodeld in Sources */,
+				BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */,
 				BE007FC2214A2D49001205D7 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +298,7 @@
 				DEVELOPMENT_TEAM = PXNF5FBHKW;
 				INFOPLIST_FILE = DesignCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tjvs.DesignCodeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tjvs.DesignCodeApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +313,7 @@
 				DEVELOPMENT_TEAM = PXNF5FBHKW;
 				INFOPLIST_FILE = DesignCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tjvs.DesignCodeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tjvs.DesignCodeApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

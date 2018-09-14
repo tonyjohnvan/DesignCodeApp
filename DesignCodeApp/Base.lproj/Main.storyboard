@@ -307,11 +307,11 @@ design and code an iOS 11 app.</string>
                                                     <size key="itemSize" width="304" height="248"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="EHD-Pe-biB" customClass="SectionCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                        <rect key="frame" x="20" y="0.0" width="304" height="248"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
@@ -402,7 +402,7 @@ design and code an iOS 11 app.</string>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="aJy-th-yBm" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" id="0kz-sp-N8d"/>
-                                            <constraint firstItem="uNE-ko-EmN" firstAttribute="bottom" secondItem="aJy-th-yBm" secondAttribute="bottom" constant="50" id="1si-eo-22l"/>
+                                            <constraint firstAttribute="bottom" secondItem="aJy-th-yBm" secondAttribute="bottom" constant="50" id="1si-eo-22l"/>
                                             <constraint firstAttribute="trailing" secondItem="XB1-3i-Yy9" secondAttribute="trailing" constant="20" id="AXu-Ti-OnD"/>
                                             <constraint firstItem="XB1-3i-Yy9" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" constant="20" id="Jdq-c4-YQT"/>
                                             <constraint firstAttribute="height" constant="380" id="Ram-vn-91E"/>
@@ -464,10 +464,10 @@ design and code an iOS 11 app.</string>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
-        <!--View Controller-->
+        <!--Testimonial View Controller-->
         <scene sceneID="LVe-by-7rs">
             <objects>
-                <viewController id="8Lh-2R-lPY" sceneMemberID="viewController">
+                <viewController id="8Lh-2R-lPY" customClass="TestimonialViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbO-hv-TkR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -488,7 +488,7 @@ design and code an iOS 11 app.</string>
                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="testimonialCell" id="We6-sb-Eo5">
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="testimonialCell" id="We6-sb-Eo5" customClass="TestimonialCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="0.0" width="304" height="235"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -525,7 +525,7 @@ design and code an iOS 11 app.</string>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Quote-End" translatesAutoresizingMaskIntoConstraints="NO" id="FBd-6a-SxZ">
-                                                                    <rect key="frame" x="291" y="154.33333333333334" width="12" height="9"/>
+                                                                    <rect key="frame" x="284" y="154.33333333333334" width="12" height="9"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="12" id="Cjg-tB-zNv"/>
                                                                         <constraint firstAttribute="height" constant="9" id="HcK-OI-21L"/>
@@ -561,7 +561,7 @@ design and code an iOS 11 app.</string>
                                                                 <constraint firstItem="vIA-ZJ-hnf" firstAttribute="leading" secondItem="oCw-Pr-du0" secondAttribute="trailing" constant="10" id="jX6-pH-b9I"/>
                                                                 <constraint firstItem="FBd-6a-SxZ" firstAttribute="bottom" secondItem="Cld-hl-7uz" secondAttribute="bottom" id="lJP-nf-gKg"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Cld-hl-7uz" secondAttribute="trailing" constant="20" id="mz9-fE-2Ca"/>
-                                                                <constraint firstItem="FBd-6a-SxZ" firstAttribute="leading" secondItem="Cld-hl-7uz" secondAttribute="trailing" constant="7" id="p59-74-PFI"/>
+                                                                <constraint firstItem="FBd-6a-SxZ" firstAttribute="leading" secondItem="Cld-hl-7uz" secondAttribute="trailing" id="p59-74-PFI"/>
                                                                 <constraint firstItem="vIA-ZJ-hnf" firstAttribute="leading" secondItem="779-h8-nHD" secondAttribute="leading" constant="54" id="zPh-x1-GtM"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
@@ -588,14 +588,71 @@ design and code an iOS 11 app.</string>
                                                     <constraint firstItem="779-h8-nHD" firstAttribute="top" secondItem="We6-sb-Eo5" secondAttribute="top" id="mQh-SB-QPJ"/>
                                                 </constraints>
                                                 <size key="customSize" width="304" height="235"/>
+                                                <connections>
+                                                    <outlet property="avatar" destination="oCw-Pr-du0" id="ziq-is-IUW"/>
+                                                    <outlet property="job" destination="L9Q-HM-SpH" id="1cO-0h-ewQ"/>
+                                                    <outlet property="name" destination="yr8-4Q-Jbf" id="Iuj-NE-b1j"/>
+                                                    <outlet property="text" destination="Cld-hl-7uz" id="DeW-yV-GQf"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CnX-Hu-Msm">
+                                        <rect key="frame" x="67.000000000000014" y="335" width="240.33333333333337" height="73.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26,000 people" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-yu-nxQ">
+                                                <rect key="frame" x="18.666666666666671" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="are learning from Design+Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-WA-r9R">
+                                                <rect key="frame" x="8.6666666666666714" y="36" width="223" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO8-ag-pjm">
+                                                <rect key="frame" x="0.0" y="70.666666666666686" width="240.33333333333334" height="3"/>
+                                                <color key="backgroundColor" red="0.68627450980392157" green="0.27843137254901962" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="geV-Wy-fcl"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rO8-ag-pjm" secondAttribute="trailing" id="FDa-4r-IF3"/>
+                                            <constraint firstItem="rO8-ag-pjm" firstAttribute="leading" secondItem="CnX-Hu-Msm" secondAttribute="leading" id="g2Q-en-TTN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="A9K-D2-Tu6">
+                                        <rect key="frame" x="18" y="430" width="339.66666666666669" height="44"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Apple" translatesAutoresizingMaskIntoConstraints="NO" id="3im-dq-qBm">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="44"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Google" translatesAutoresizingMaskIntoConstraints="NO" id="IEz-8x-GsA">
+                                                <rect key="frame" x="108.66666666666669" y="0.0" width="100" height="44"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Stripe" translatesAutoresizingMaskIntoConstraints="NO" id="m04-08-y9P">
+                                                <rect key="frame" x="258.66666666666669" y="0.0" width="81" height="44"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="A9K-D2-Tu6" secondAttribute="bottom" constant="50" id="Azf-pT-Duy"/>
+                                    <constraint firstItem="CnX-Hu-Msm" firstAttribute="centerX" secondItem="c7b-xT-rrb" secondAttribute="centerX" id="H54-dr-uib"/>
                                     <constraint firstItem="pz1-Dj-nfB" firstAttribute="leading" secondItem="c7b-xT-rrb" secondAttribute="leading" id="Liq-to-kMm"/>
+                                    <constraint firstItem="A9K-D2-Tu6" firstAttribute="centerX" secondItem="c7b-xT-rrb" secondAttribute="centerX" id="QcN-bv-dcb"/>
                                     <constraint firstItem="pz1-Dj-nfB" firstAttribute="top" secondItem="c7b-xT-rrb" secondAttribute="top" constant="50" id="bcs-IT-BQ8"/>
+                                    <constraint firstItem="CnX-Hu-Msm" firstAttribute="top" secondItem="pz1-Dj-nfB" secondAttribute="bottom" constant="50" id="rq4-ej-XIU"/>
                                     <constraint firstAttribute="trailing" secondItem="pz1-Dj-nfB" secondAttribute="trailing" id="vLB-Lw-qe6"/>
                                 </constraints>
                             </view>
@@ -609,6 +666,9 @@ design and code an iOS 11 app.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Cl-7I-hwt"/>
                     </view>
+                    <connections>
+                        <outlet property="testimonialCollectionView" destination="pz1-Dj-nfB" id="xAq-Yi-MuE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rS-9u-gEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -620,6 +680,9 @@ design and code an iOS 11 app.</string>
         <image name="Art-Book" width="133" height="150"/>
         <image name="Art-iPhoneX" width="129" height="326"/>
         <image name="Home" width="2880" height="1600"/>
+        <image name="Logo-Apple" width="36" height="44"/>
+        <image name="Logo-Google" width="100" height="37"/>
+        <image name="Logo-Stripe" width="81" height="33"/>
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
         <image name="ios11" width="2880" height="1600"/>
