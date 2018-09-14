@@ -448,7 +448,35 @@ design and code an iOS 11 app.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BMo-xt-EPB"/>
+                    <navigationItem key="navigationItem" id="BMo-xt-EPB">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="Logo-DesignCode" id="Qlr-l4-KIm"/>
+                        <view key="titleView" contentMode="scaleToFill" id="y47-CN-GTH">
+                            <rect key="frame" x="127.66666666666669" y="8" width="120" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LN-6Z-ji2">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <state key="normal" title="Get the Book">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="14"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="JQK-rx-3aQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="4MO-Rt-Nfc" id="XEO-16-R1O"/>
@@ -886,6 +914,7 @@ design and code an iOS 11 app.</string>
                             <constraint firstItem="wva-OG-4lF" firstAttribute="leading" secondItem="SrL-cJ-uAg" secondAttribute="leading" id="YO4-Gu-2lj"/>
                             <constraint firstAttribute="trailing" secondItem="wva-OG-4lF" secondAttribute="trailing" id="uSJ-3f-8jN"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="UjB-F3-j42"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="tnX-Zp-AW5"/>
                 </viewController>
@@ -1152,6 +1181,7 @@ design and code an iOS 11 app.</string>
         <image name="Art-iPhoneX" width="129" height="326"/>
         <image name="Home" width="2880" height="1600"/>
         <image name="Logo-Apple" width="36" height="44"/>
+        <image name="Logo-DesignCode" width="28" height="28"/>
         <image name="Logo-Google" width="100" height="37"/>
         <image name="Logo-Stripe" width="81" height="33"/>
         <image name="More/ambience" width="36" height="36"/>
