@@ -15,10 +15,6 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     
-    @IBAction func closeButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     var section: [String: String]!
     var sections: [[String: String]]!
     var indexPath: IndexPath!
@@ -39,7 +35,6 @@ class SectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -51,4 +46,10 @@ class SectionViewController: UIViewController {
     }
     */
 
+}
+
+public extension UIViewController {
+    @IBAction public func unwindToViewController (_ segue : UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
 }
