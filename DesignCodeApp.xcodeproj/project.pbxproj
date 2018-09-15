@@ -18,6 +18,7 @@
 		BE95E000214B5B8900391597 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */; };
 		BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */; };
 		BE95E004214B62F900391597 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E003214B62F900391597 /* SectionViewController.swift */; };
+		BE95E006214CB21900391597 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E005214CB21900391597 /* ChaptersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
 		BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE95E003214B62F900391597 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		BE95E005214CB21900391597 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				9698CD1E1FBB5DE000501C47 /* AppDelegate.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
+				BE95E005214CB21900391597 /* ChaptersViewController.swift */,
 				BE007FC1214A2D49001205D7 /* Data.swift */,
 				BE007FC3214A2DBF001205D7 /* SectionCollectionViewCell.swift */,
 				BE95E003214B62F900391597 /* SectionViewController.swift */,
@@ -162,6 +165,7 @@
 				9698CD271FBB5DE000501C47 /* DesignCodeApp.xcdatamodeld in Sources */,
 				BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */,
 				BE007FC2214A2D49001205D7 /* Data.swift in Sources */,
+				BE95E006214CB21900391597 /* ChaptersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

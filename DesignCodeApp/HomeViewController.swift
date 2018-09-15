@@ -102,6 +102,7 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         
+        
         // Hero Section Animations
         if offsetY < 0 {
             heroView.transform = CGAffineTransform(translationX: 0, y: offsetY)
@@ -125,11 +126,12 @@ extension HomeViewController: UIScrollViewDelegate {
                 
                 cell.layer.transform = animateCell(cellFrame: cellFrame)
             }
+        } else {
+            
+            //NavigationBar Behavior
+            let navigationIsHidden = offsetY <= 0
+            navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
         }
-        
-        //NavigationBar Behavior
-        let navigationIsHidden = offsetY <= 0
-        navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
     }
     
     func animateCell(cellFrame: CGRect) -> CATransform3D {
