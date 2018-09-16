@@ -504,7 +504,7 @@ design and code an iOS 11 app.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-zk-ykD">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-fB-Afd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
@@ -641,7 +641,7 @@ design and code an iOS 11 app.</string>
                             <constraint firstItem="wys-tU-A0C" firstAttribute="top" secondItem="c3d-Ra-Omy" secondAttribute="top" constant="20" id="Q3K-7R-XOK"/>
                             <constraint firstItem="6ba-zk-ykD" firstAttribute="leading" secondItem="K4P-S9-rY1" secondAttribute="leading" id="avo-cr-FSf"/>
                             <constraint firstItem="6ba-zk-ykD" firstAttribute="top" secondItem="c3d-Ra-Omy" secondAttribute="top" id="dNz-0f-gle"/>
-                            <constraint firstItem="6ba-zk-ykD" firstAttribute="bottom" secondItem="c3d-Ra-Omy" secondAttribute="bottom" priority="999" id="soa-oq-GLy"/>
+                            <constraint firstItem="6ba-zk-ykD" firstAttribute="bottom" secondItem="K4P-S9-rY1" secondAttribute="bottom" priority="999" id="soa-oq-GLy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c3d-Ra-Omy"/>
                     </view>

@@ -13,8 +13,10 @@ class PresentSectionViewController: NSObject, UIViewControllerAnimatedTransition
     var cellFrame : CGRect!
     var cellTransform : CATransform3D!
     
+    let animateDurationTimeConst : TimeInterval = 0.6
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 5
+        return animateDurationTimeConst
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -28,6 +30,16 @@ class PresentSectionViewController: NSObject, UIViewControllerAnimatedTransition
         destination.scrollView.layer.shadowOpacity = 0.25
         destination.scrollView.layer.shadowOffset.height = 10
         destination.scrollView.layer.shadowRadius = 20
+        
+        let moveUpTransform = CGAffineTransform(translationX: 0, y: -100)
+        let scaleUpTransform = CGAffineTransform(scaleX: 2, y: 2)
+        let removeFromViewTransform = moveUpTransform.concatenating(scaleUpTransform)
+        
+        destination.closeVisualEffectView.alpha = 0
+        destination.closeVisualEffectView.transform = removeFromViewTransform
+        
+        destination.subheadVisualEffectView.alpha = 0
+        destination.subheadVisualEffectView.transform = removeFromViewTransform
         
         let widthConstraint = destination.scrollView.widthAnchor.constraint(equalToConstant: 304)
         let heightConstraint = destination.scrollView.heightAnchor.constraint(equalToConstant: 248)
@@ -43,12 +55,27 @@ class PresentSectionViewController: NSObject, UIViewControllerAnimatedTransition
         
         containerView.layoutIfNeeded()
         
-        let animator = UIViewPropertyAnimator(duration: 5, dampingRatio: 0.7) {
+        let animator = UIViewPropertyAnimator(duration: animateDurationTimeConst, dampingRatio: 0.7) {
             //Final State
-            destination.scrollView.layer.cornerRadius = 0
             NSLayoutConstraint.deactivate([widthConstraint,heightConstraint,bottomConstraint])
             destination.view.layer.transform = CATransform3DIdentity
             containerView.layoutIfNeeded()
+            
+            
+            destination.scrollView.layer.cornerRadius = 0
+            
+            destination.closeVisualEffectView.alpha = 1
+            destination.closeVisualEffectView.transform = .identity
+            
+            destination.subheadVisualEffectView.alpha = 1
+            destination.subheadVisualEffectView.transform = .identity
+            
+            //label transform
+            let scaleTitleTransform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            let moveTitleTransform = CGAffineTransform(translationX: 30, y: 10)
+            let titleTransform = scaleTitleTransform.concatenating(moveTitleTransform)
+            
+            destination.titleLable.transform = titleTransform
         }
         
         animator.addCompletion { (finished) in
