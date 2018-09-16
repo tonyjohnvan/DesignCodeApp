@@ -41,8 +41,8 @@ class PresentSectionViewController: NSObject, UIViewControllerAnimatedTransition
         destination.subheadVisualEffectView.alpha = 0
         destination.subheadVisualEffectView.transform = removeFromViewTransform
         
-        let widthConstraint = destination.scrollView.widthAnchor.constraint(equalToConstant: 304)
-        let heightConstraint = destination.scrollView.heightAnchor.constraint(equalToConstant: 248)
+        let widthConstraint = destination.scrollView.widthAnchor.constraint(equalToConstant: cellFrame.width)
+        let heightConstraint = destination.scrollView.heightAnchor.constraint(equalToConstant: cellFrame.height)
         let bottomConstraint = destination.scrollView.bottomAnchor.constraint(equalTo: destination.coverView.bottomAnchor)
         
         NSLayoutConstraint.activate([widthConstraint, heightConstraint, bottomConstraint])

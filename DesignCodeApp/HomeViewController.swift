@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     var isStatusBarHidden = false
     
     let presentSectionViewController = PresentSectionViewController()
+    let dismissSectionViewController = DismissSectionViewController()
     
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
@@ -96,6 +97,8 @@ class HomeViewController: UIViewController {
             
             presentSectionViewController.cellFrame = cellFrame
             presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
+            dismissSectionViewController.cellFrame = cellFrame
+            dismissSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
             
             isStatusBarHidden = true
             
@@ -112,6 +115,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UIViewControllerTransitioningDelegate{
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return presentSectionViewController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismissSectionViewController
     }
 }
 
