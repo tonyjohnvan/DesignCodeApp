@@ -500,11 +500,11 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="F2h-Iq-NJL" customClass="SectionViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4P-S9-rY1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-zk-ykD">
-                                <rect key="frame" x="0.0" y="44" width="375" height="651"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-fB-Afd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
@@ -569,14 +569,14 @@ design and code an iOS 11 app.</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="o5I-cm-XOL" firstAttribute="top" secondItem="l3b-fB-Afd" secondAttribute="top" constant="66" id="DiX-8e-8G8"/>
-                                            <constraint firstAttribute="height" constant="420" id="EmL-dA-knu"/>
+                                            <constraint firstAttribute="height" priority="999" constant="420" id="EmL-dA-knu"/>
                                             <constraint firstItem="Lak-eT-g0O" firstAttribute="leading" secondItem="l3b-fB-Afd" secondAttribute="leading" constant="20" id="NHT-eN-Ynm"/>
                                             <constraint firstItem="o5I-cm-XOL" firstAttribute="leading" secondItem="N0X-bs-4r2" secondAttribute="leading" constant="20" id="NP1-IK-wal"/>
                                             <constraint firstItem="UmA-He-fZg" firstAttribute="leading" secondItem="l3b-fB-Afd" secondAttribute="leading" id="PpS-j5-eIX"/>
                                             <constraint firstItem="tYI-5U-Yqh" firstAttribute="leading" secondItem="N0X-bs-4r2" secondAttribute="leading" constant="20" id="TWe-Fh-V0e"/>
                                             <constraint firstAttribute="trailing" secondItem="UmA-He-fZg" secondAttribute="trailing" id="azj-j1-2Wx"/>
                                             <constraint firstAttribute="bottom" secondItem="tYI-5U-Yqh" secondAttribute="bottom" constant="30" id="c5J-zC-eqk"/>
-                                            <constraint firstAttribute="bottom" secondItem="UmA-He-fZg" secondAttribute="bottom" id="dCA-1f-IiN"/>
+                                            <constraint firstAttribute="bottom" secondItem="UmA-He-fZg" secondAttribute="bottom" priority="999" id="dCA-1f-IiN"/>
                                             <constraint firstItem="Lak-eT-g0O" firstAttribute="top" secondItem="l3b-fB-Afd" secondAttribute="top" constant="20" id="hZy-jR-oFT"/>
                                             <constraint firstItem="UmA-He-fZg" firstAttribute="top" secondItem="l3b-fB-Afd" secondAttribute="top" id="lQX-XF-PBM"/>
                                         </constraints>
@@ -589,6 +589,7 @@ design and code an iOS 11 app.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="l3b-fB-Afd" secondAttribute="trailing" id="5Up-RZ-aPd"/>
                                     <constraint firstItem="l3b-fB-Afd" firstAttribute="centerX" secondItem="6ba-zk-ykD" secondAttribute="centerX" id="8Pq-aK-S7U"/>
@@ -602,7 +603,7 @@ design and code an iOS 11 app.</string>
                                 <viewLayoutGuide key="safeArea" id="mDA-NL-RQV"/>
                             </scrollView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wys-tU-A0C">
-                                <rect key="frame" x="319" y="160" width="36" height="36"/>
+                                <rect key="frame" x="319" y="64" width="36" height="36"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sxu-0t-7ef">
                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -634,22 +635,25 @@ design and code an iOS 11 app.</string>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6ba-zk-ykD" firstAttribute="trailing" secondItem="K4P-S9-rY1" secondAttribute="trailing" id="7vU-iK-BbO"/>
+                            <constraint firstItem="6ba-zk-ykD" firstAttribute="trailing" secondItem="K4P-S9-rY1" secondAttribute="trailing" priority="999" id="7vU-iK-BbO"/>
                             <constraint firstAttribute="trailing" secondItem="wys-tU-A0C" secondAttribute="trailing" constant="20" id="Oih-wu-xUu"/>
                             <constraint firstItem="wys-tU-A0C" firstAttribute="top" secondItem="c3d-Ra-Omy" secondAttribute="top" constant="20" id="Q3K-7R-XOK"/>
                             <constraint firstItem="6ba-zk-ykD" firstAttribute="leading" secondItem="K4P-S9-rY1" secondAttribute="leading" id="avo-cr-FSf"/>
-                            <constraint firstItem="6ba-zk-ykD" firstAttribute="top" secondItem="K4P-S9-rY1" secondAttribute="top" constant="44" id="dNz-0f-gle"/>
-                            <constraint firstItem="6ba-zk-ykD" firstAttribute="bottom" secondItem="K4P-S9-rY1" secondAttribute="bottom" constant="-34" id="soa-oq-GLy"/>
+                            <constraint firstItem="6ba-zk-ykD" firstAttribute="top" secondItem="c3d-Ra-Omy" secondAttribute="top" id="dNz-0f-gle"/>
+                            <constraint firstItem="6ba-zk-ykD" firstAttribute="bottom" secondItem="c3d-Ra-Omy" secondAttribute="bottom" priority="999" id="soa-oq-GLy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c3d-Ra-Omy"/>
                     </view>
                     <connections>
                         <outlet property="bodyLabel" destination="QPI-bj-Q9f" id="VFf-aN-WOX"/>
                         <outlet property="captionLabel" destination="tYI-5U-Yqh" id="5qN-x0-zO7"/>
+                        <outlet property="closeVisualEffectView" destination="wys-tU-A0C" id="eVb-cw-jhF"/>
                         <outlet property="coverImageView" destination="UmA-He-fZg" id="s0Z-jA-9zC"/>
+                        <outlet property="coverView" destination="l3b-fB-Afd" id="O33-tX-GSg"/>
                         <outlet property="progressLabel" destination="9Ca-Tz-1Y9" id="QAf-fi-DVt"/>
+                        <outlet property="scrollView" destination="6ba-zk-ykD" id="q1x-Ev-Tof"/>
+                        <outlet property="subheadVisualEffectView" destination="Lak-eT-g0O" id="YPV-T2-a84"/>
                         <outlet property="titleLable" destination="o5I-cm-XOL" id="12n-mz-bfR"/>
                     </connections>
                 </viewController>
@@ -1599,6 +1603,6 @@ design and code an iOS 11 app.</string>
         <image name="ios11" width="2880" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ASw-et-adt"/>
+        <segue reference="Q3R-RY-9En"/>
     </inferredMetricsTieBreakers>
 </document>

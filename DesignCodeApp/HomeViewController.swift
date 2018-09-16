@@ -19,6 +19,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bookView: UIView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
+    var isStatusBarHidden = false
+    
+    let presentSectionViewController = PresentSectionViewController()
+    
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
         
@@ -33,8 +37,24 @@ class HomeViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        isStatusBarHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
     }
     
     override func viewDidLoad() {
@@ -69,10 +89,30 @@ class HomeViewController: UIViewController {
             toViewController.section = section
             toViewController.sections = sections
             toViewController.indexPath = indexPath
+            toViewController.transitioningDelegate = self
+            
+            let attributes = chapterCollectionView.layoutAttributesForItem(at: indexPath)!
+            let cellFrame = chapterCollectionView.convert(attributes.frame, to: view)
+            
+            presentSectionViewController.cellFrame = cellFrame
+            presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
+            
+            isStatusBarHidden = true
+            
+            UIView.animate(withDuration: 0.5) {
+                self.setNeedsStatusBarAppearanceUpdate()
+            }
+            
         }
     }
 
 
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate{
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentSectionViewController
+    }
 }
 
 

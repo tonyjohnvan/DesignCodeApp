@@ -15,6 +15,11 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var coverView: UIView!
+    @IBOutlet weak var subheadVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var closeVisualEffectView: UIVisualEffectView!
+    
     var section: [String: String]!
     var sections: [[String: String]]!
     var indexPath: IndexPath!
@@ -29,6 +34,18 @@ class SectionViewController: UIViewController {
         
         progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
     }
 
     override func didReceiveMemoryWarning() {
