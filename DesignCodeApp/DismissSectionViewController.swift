@@ -28,7 +28,7 @@ class DismissSectionViewController: NSObject, UIViewControllerAnimatedTransition
         //Initial
         origin.view.setNeedsLayout()
         
-        let animator = UIViewPropertyAnimator(duration: animateDurationTimeConst, dampingRatio: 0.7) {
+        let animator = UIViewPropertyAnimator(duration: animateDurationTimeConst, dampingRatio: 1) {
             //Final State
             
             let widthConstraint = origin.scrollView.widthAnchor.constraint(equalToConstant: self.cellFrame.width)
