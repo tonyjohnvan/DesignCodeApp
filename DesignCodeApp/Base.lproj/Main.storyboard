@@ -1284,7 +1284,7 @@ design and code an iOS 11 app.</string>
         <!--Purchase-->
         <scene sceneID="u0h-cw-l3u">
             <objects>
-                <viewController id="61q-7K-MQl" userLabel="Purchase" sceneMemberID="viewController">
+                <viewController id="61q-7K-MQl" userLabel="Purchase" customClass="PurchaseViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="unL-S4-8md">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1768,8 +1768,19 @@ design and code an iOS 11 app.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5pM-py-6GF"/>
                     </view>
+                    <connections>
+                        <outlet property="panToClose" destination="na9-Or-DKf" id="c5m-WD-SrT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVu-u2-dle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="na9-Or-DKf" customClass="InteractionPanToClose" customModule="DesignCodeApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dialogView" destination="875-2L-oYx" id="nTh-dZ-zSN"/>
+                        <outlet property="scrollView" destination="pcR-wF-uFD" id="sgY-6w-ZKd"/>
+                        <outlet property="viewController" destination="61q-7K-MQl" id="QrQ-ib-hJT"/>
+                        <outlet property="visualEffectView" destination="iIA-r9-Iz8" id="NDT-7m-MLG"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="6701.5625" y="424.8046875"/>
         </scene>
