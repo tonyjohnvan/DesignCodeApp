@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Spring (1.0.5)
+  - ViewAnimator (2.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - ViewAnimator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ViewAnimator
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: c540239f3590bbaf4a35c3959c329dd5ed4e3eee
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
+
+PODFILE CHECKSUM: 5b65a21edd8f4c2aaed3365b66f6b27b469147b4
+
+COCOAPODS: 1.5.3
