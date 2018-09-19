@@ -1943,7 +1943,7 @@ design and code an iOS 11 app.</string>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eES-Xc-lcA" userLabel="Inner View" customClass="DesignableView" customModule="Spring">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="616.66666666666663"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="249" image="Purchase-Background" translatesAutoresizingMaskIntoConstraints="NO" id="JQf-lx-Bn1">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="249" image="Background/Purchase-Background" translatesAutoresizingMaskIntoConstraints="NO" id="JQf-lx-Bn1">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="616.66666666666663"/>
                                                     </imageView>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uki-rf-luA" userLabel="Layout Guide">
@@ -3261,6 +3261,7 @@ design and code an iOS 11 app.</string>
         <image name="Action-Play-Small" width="23" height="35"/>
         <image name="Art-Book" width="133" height="150"/>
         <image name="Art-iPhoneX" width="129" height="326"/>
+        <image name="Background/Purchase-Background" width="5120" height="2880"/>
         <image name="Benefit-Exercises-small" width="36" height="36"/>
         <image name="Benefit-Files-small" width="36" height="36"/>
         <image name="Benefit-Offline-small" width="36" height="36"/>
@@ -3286,7 +3287,6 @@ design and code an iOS 11 app.</string>
         <image name="More/logo-medium" width="40" height="40"/>
         <image name="More/password" width="36" height="36"/>
         <image name="More/safari" width="36" height="36"/>
-        <image name="Purchase-Background" width="5120" height="2880"/>
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
         <image name="Tab Bar/bookmarks" width="20" height="26"/>
@@ -3303,7 +3303,7 @@ design and code an iOS 11 app.</string>
         <image name="swift-wallpaper" width="5120" height="2880"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X27-Nu-6Sb"/>
+        <segue reference="Oje-J2-uaO"/>
         <segue reference="Q3R-RY-9En"/>
     </inferredMetricsTieBreakers>
 </document>
