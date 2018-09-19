@@ -69,7 +69,7 @@ extension ExerciseTableViewCell : UICollectionViewDataSource{
 
 extension ExerciseTableViewCell : ScroeCellDelegate{
     func scoreCell(_ cell: ScoreCollectionViewCell, didTapTryAgainExercise exercise: Array<Dictionary<String, Any>>) {
-        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: false)
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
         collectionView.reloadData()
     }
     
@@ -84,7 +84,7 @@ extension ExerciseTableViewCell : QuestioncellDelegate{
         let indexPath = collectionView.indexPath(for: cell)!
         let nextIndex = IndexPath(row: indexPath.row + 1, section: indexPath.section)
         if indexPath.row < questions.count {
-            collectionView.scrollToItem(at: nextIndex, at: .centeredHorizontally, animated: false)
+            collectionView.scrollToItem(at: nextIndex, at: .centeredHorizontally, animated: true)
         }
         
         var answerCorrect : Bool = false

@@ -1278,7 +1278,6 @@ design and code an iOS 11 app.</string>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CZ-wv-4BI" customClass="MKRingProgressView">
                                                                                             <rect key="frame" x="20" y="20" width="140" height="140"/>
-                                                                                            <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="140" id="Y7B-E7-UcL"/>
                                                                                                 <constraint firstAttribute="width" constant="140" id="dMG-lC-W9T"/>
