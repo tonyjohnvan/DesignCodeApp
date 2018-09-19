@@ -10,6 +10,7 @@ target 'DesignCodeApp' do
   pod 'Alamofire', '~> 4.7'
   pod 'ViewAnimator'
   pod 'TPKeyboardAvoiding'
+  pod 'MKRingProgressView'
 
 end
 

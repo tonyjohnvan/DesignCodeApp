@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "337910A8E72A8C2AC2118CBADD714095"
-               BlueprintName = "Spring"
+               BlueprintIdentifier = "274F35F2135D6FF71582D443D84227CD"
+               BlueprintName = "MKRingProgressView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Spring.framework">
+               BuildableName = "MKRingProgressView.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

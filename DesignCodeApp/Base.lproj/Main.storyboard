@@ -972,7 +972,7 @@ design and code an iOS 11 app.</string>
         <!--More-->
         <scene sceneID="vqT-3K-x9t">
             <objects>
-                <viewController id="9jX-ab-Dt4" sceneMemberID="viewController">
+                <viewController id="9jX-ab-Dt4" customClass="MoreViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SrL-cJ-uAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -995,7 +995,7 @@ design and code an iOS 11 app.</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PROGRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-ov-Gvd">
-                                                        <rect key="frame" x="113.66666666666666" y="8" width="107.66666666666666" height="18"/>
+                                                        <rect key="frame" x="114" y="8" width="107.66666666666669" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.5038527397260274" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1009,25 +1009,39 @@ design and code an iOS 11 app.</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-HR-5zN">
                                                                         <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="70"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-1" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-2v-dkq">
-                                                                                <rect key="frame" x="14.333333333333336" y="0.0" width="70" height="70"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="70" id="jKV-Nk-rcF"/>
-                                                                                    <constraint firstAttribute="width" constant="70" id="t53-hD-h3N"/>
-                                                                                </constraints>
-                                                                            </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC3-4A-ijv">
-                                                                                <rect key="frame" x="22.333333333333339" y="23" width="53.666666666666657" height="24"/>
+                                                                                <rect key="frame" x="22.666666666666668" y="23" width="53.666666666666657" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-rv-KLL" customClass="MKRingProgressView">
+                                                                                <rect key="frame" x="14.333333333333336" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="ezM-dX-K5X"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="rwx-QX-WYM"/>
+                                                                                </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                                        <color key="value" red="0.84705882352941175" green="0.16862745098039217" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                                        <color key="value" red="0.46666666666666667" green="0.10980392156862745" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                                                                        <real key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                                        <real key="value" value="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </view>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstItem="6cr-2v-dkq" firstAttribute="centerX" secondItem="bpA-HR-5zN" secondAttribute="centerX" id="1dp-G2-X8t"/>
                                                                             <constraint firstItem="tC3-4A-ijv" firstAttribute="centerX" secondItem="bpA-HR-5zN" secondAttribute="centerX" id="AOR-PO-mIQ"/>
+                                                                            <constraint firstItem="pvS-rv-KLL" firstAttribute="centerX" secondItem="bpA-HR-5zN" secondAttribute="centerX" id="FBx-3g-yra"/>
                                                                             <constraint firstAttribute="height" constant="70" id="IiH-SR-7F3"/>
-                                                                            <constraint firstItem="6cr-2v-dkq" firstAttribute="centerY" secondItem="bpA-HR-5zN" secondAttribute="centerY" id="q8r-k5-S0g"/>
+                                                                            <constraint firstItem="pvS-rv-KLL" firstAttribute="centerY" secondItem="bpA-HR-5zN" secondAttribute="centerY" id="Z5g-wu-9Ce"/>
                                                                             <constraint firstItem="tC3-4A-ijv" firstAttribute="centerY" secondItem="bpA-HR-5zN" secondAttribute="centerY" id="zuM-jF-jLF"/>
                                                                         </constraints>
                                                                     </view>
@@ -1045,25 +1059,39 @@ design and code an iOS 11 app.</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNJ-AM-cBx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="70"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-2" translatesAutoresizingMaskIntoConstraints="NO" id="xWx-rX-Skg">
-                                                                                <rect key="frame" x="14.666666666666657" y="0.0" width="70" height="70"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" constant="70" id="aeN-BT-6rq"/>
-                                                                                    <constraint firstAttribute="height" constant="70" id="p4e-Du-Yxr"/>
-                                                                                </constraints>
-                                                                            </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qme-Gy-0MP">
-                                                                                <rect key="frame" x="22.999999999999996" y="23" width="53.666666666666657" height="24"/>
+                                                                                <rect key="frame" x="23.333333333333311" y="23" width="53.666666666666657" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEy-MO-eKs" customClass="MKRingProgressView">
+                                                                                <rect key="frame" x="14.333333333333314" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="87T-tM-IFb"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="8EJ-Js-AP9"/>
+                                                                                </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                                        <color key="value" red="0.92941176470588238" green="0.47843137254901957" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                                        <color key="value" red="1" green="0.69019607843137254" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                                                                        <real key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                                        <real key="value" value="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </view>
                                                                         </subviews>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="70" id="66U-dP-Tps"/>
                                                                             <constraint firstItem="qme-Gy-0MP" firstAttribute="centerX" secondItem="bNJ-AM-cBx" secondAttribute="centerX" id="8qh-j5-gG2"/>
-                                                                            <constraint firstItem="xWx-rX-Skg" firstAttribute="centerX" secondItem="bNJ-AM-cBx" secondAttribute="centerX" id="Qfe-Ny-yY6"/>
-                                                                            <constraint firstItem="xWx-rX-Skg" firstAttribute="centerY" secondItem="bNJ-AM-cBx" secondAttribute="centerY" id="X2B-bg-Tl8"/>
+                                                                            <constraint firstItem="TEy-MO-eKs" firstAttribute="centerY" secondItem="bNJ-AM-cBx" secondAttribute="centerY" id="nvF-Mg-UoY"/>
+                                                                            <constraint firstItem="TEy-MO-eKs" firstAttribute="centerX" secondItem="bNJ-AM-cBx" secondAttribute="centerX" id="t90-lB-tBi"/>
                                                                             <constraint firstItem="qme-Gy-0MP" firstAttribute="centerY" secondItem="bNJ-AM-cBx" secondAttribute="centerY" id="xhU-Z9-PLm"/>
                                                                         </constraints>
                                                                     </view>
@@ -1081,26 +1109,40 @@ design and code an iOS 11 app.</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZP9-Wa-L6o">
                                                                         <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="70"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder/image-ring-3" translatesAutoresizingMaskIntoConstraints="NO" id="rwW-Xd-o8K">
-                                                                                <rect key="frame" x="15" y="0.0" width="70" height="70"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" constant="70" id="PfO-Cc-pZD"/>
-                                                                                    <constraint firstAttribute="height" constant="70" id="et2-qv-yia"/>
-                                                                                </constraints>
-                                                                            </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdT-Lu-Ffx">
-                                                                                <rect key="frame" x="22.333333333333339" y="23" width="53.666666666666657" height="24"/>
+                                                                                <rect key="frame" x="22.666666666666654" y="23" width="53.666666666666657" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-Bb-xyu" customClass="MKRingProgressView">
+                                                                                <rect key="frame" x="13.666666666666686" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="oXg-UQ-YfM"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="zem-8K-FYV"/>
+                                                                                </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                                        <color key="value" red="0.24313725490196078" green="0.51372549019607838" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                                        <color key="value" red="0.40784313725490196" green="0.77254901960784317" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                                                                        <real key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                                        <real key="value" value="0.0"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </view>
                                                                         </subviews>
                                                                         <constraints>
+                                                                            <constraint firstItem="ya8-Bb-xyu" firstAttribute="centerY" secondItem="ZP9-Wa-L6o" secondAttribute="centerY" id="52b-bY-8cf"/>
+                                                                            <constraint firstItem="ya8-Bb-xyu" firstAttribute="centerX" secondItem="ZP9-Wa-L6o" secondAttribute="centerX" id="73p-PA-9nW"/>
                                                                             <constraint firstAttribute="height" constant="70" id="JZT-6l-QLk"/>
                                                                             <constraint firstItem="QdT-Lu-Ffx" firstAttribute="centerY" secondItem="ZP9-Wa-L6o" secondAttribute="centerY" id="Nt8-T9-otM"/>
-                                                                            <constraint firstItem="rwW-Xd-o8K" firstAttribute="centerY" secondItem="ZP9-Wa-L6o" secondAttribute="centerY" id="j4d-P5-Nxo"/>
                                                                             <constraint firstItem="QdT-Lu-Ffx" firstAttribute="centerX" secondItem="ZP9-Wa-L6o" secondAttribute="centerX" id="m4d-OQ-FWa"/>
-                                                                            <constraint firstItem="rwW-Xd-o8K" firstAttribute="centerX" secondItem="ZP9-Wa-L6o" secondAttribute="centerX" id="ykS-c2-Rhv"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpS-GR-CI7">
@@ -1114,7 +1156,7 @@ design and code an iOS 11 app.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only made possible with your kind support. Thank you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRp-Uk-Yrv">
-                                                        <rect key="frame" x="83" y="526" width="170" height="54"/>
+                                                        <rect key="frame" x="83.333333333333314" y="526" width="170" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="170" id="Y4K-Vm-6bD"/>
                                                         </constraints>
@@ -1123,7 +1165,7 @@ design and code an iOS 11 app.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-7D-G9R">
-                                                        <rect key="frame" x="140" y="595" width="56" height="34"/>
+                                                        <rect key="frame" x="140.33333333333334" y="595" width="56" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Twitter">
                                                             <color key="titleColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1314,6 +1356,14 @@ design and code an iOS 11 app.</string>
                         <viewLayoutGuide key="safeArea" id="UjB-F3-j42"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="tnX-Zp-AW5"/>
+                    <connections>
+                        <outlet property="progress1Label" destination="tC3-4A-ijv" id="d5o-lq-z55"/>
+                        <outlet property="progress1View" destination="pvS-rv-KLL" id="Hh6-57-lLK"/>
+                        <outlet property="progress2Label" destination="qme-Gy-0MP" id="fbX-fS-LVW"/>
+                        <outlet property="progress2View" destination="TEy-MO-eKs" id="Kor-2m-LNc"/>
+                        <outlet property="progress3Label" destination="QdT-Lu-Ffx" id="OqQ-Nz-TuJ"/>
+                        <outlet property="progress3View" destination="ya8-Bb-xyu" id="wvq-I1-MTU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tva-Db-GT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2686,9 +2736,6 @@ design and code an iOS 11 app.</string>
         <image name="More/logo-medium" width="40" height="40"/>
         <image name="More/password" width="36" height="36"/>
         <image name="More/safari" width="36" height="36"/>
-        <image name="Placeholder/image-ring-1" width="70" height="70"/>
-        <image name="Placeholder/image-ring-2" width="70" height="70"/>
-        <image name="Placeholder/image-ring-3" width="70" height="70"/>
         <image name="Purchase-Background" width="5120" height="2880"/>
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
@@ -2705,7 +2752,7 @@ design and code an iOS 11 app.</string>
         <image name="ios11" width="2880" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oje-J2-uaO"/>
+        <segue reference="X27-Nu-6Sb"/>
         <segue reference="Q3R-RY-9En"/>
     </inferredMetricsTieBreakers>
 </document>
