@@ -22,21 +22,14 @@ class ExercisesTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        performSegue(withIdentifier: "Present Exercise Dialog", sender: nil)
+//        performSegue(withIdentifier: "Present Exercise Dialog", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return exercises.count
@@ -45,52 +38,40 @@ class ExercisesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Exercise Cell", for: indexPath) as! ExerciseTableViewCell
         cell.questions = Array(exercises.values)[indexPath.row]
+        cell.delegate = self
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+}
+
+extension ExercisesTableViewController : ExerciseTableViewCellDelegate{
+    func exerciseCell(_ cell: ExerciseTableViewCell, didReceiveShareFor exercise: Array<Dictionary<String, Any>>, onScroeCell scoreCell: ScoreCollectionViewCell) {
+        
+        let message = "🙌 72% in the iOS Design challenge from the Design+Code app by @MengTo"
+        let link = URL(string: "https://www.tonyjohnvan.com")!
+        guard let image = UIImage(view: scoreCell) else { return }
+        let objectToShare = [message, link, image] as Array<Any>
+        let activity = UIActivityViewController(activityItems: objectToShare, applicationActivities: nil)
+        activity.excludedActivityTypes = [.airDrop, .addToReadingList, .saveToCameraRoll]
+        activity.popoverPresentationController?.sourceView = scoreCell
+        present(activity, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func exerciseCell(_ cell: ExerciseTableViewCell, receivedAnswer correct: Bool, forQuestion question: Dictionary<String, Any>) {
+        performSegue(withIdentifier: "Present Exercise Dialog", sender: nil)
     }
-    */
+}
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+extension UIImage{
+    convenience init?(view: UIView){
+        UIGraphicsBeginImageContext(view.frame.size)
+        guard let currentContext = UIGraphicsGetCurrentContext() else {return nil}
+        view.layer.render(in: currentContext)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        guard let graphicImage = image?.cgImage else {
+            return nil
+        }
+        self.init(cgImage: graphicImage)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol ExerciseTableViewCellDelegate : class {
+    func exerciseCell(_ cell : ExerciseTableViewCell, receivedAnswer correct : Bool, forQuestion question: Dictionary<String, Any>)
+    
+    func exerciseCell(_ cell : ExerciseTableViewCell, didReceiveShareFor exercise : Array<Dictionary<String,Any>>, onScroeCell scoreCell : ScoreCollectionViewCell)
+}
+
 class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var delegate : ExerciseTableViewCellDelegate?
     
     var questions : Array<Dictionary<String, Any>>!
     
@@ -31,12 +39,60 @@ class ExerciseTableViewCell: UITableViewCell {
 
 extension ExerciseTableViewCell : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return questions.count
+        return questions.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Question Cell", for: indexPath) as UICollectionViewCell
+        
+        if indexPath.row == questions.count {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Score Cell", for: indexPath) as! ScoreCollectionViewCell
+            cell.exercise = questions
+            cell.delegate = self
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Question Cell", for: indexPath) as! QuestionCollectionViewCell
+        
+        let question = questions[indexPath.row]
+        cell.question = question
+        cell.delegate = self
+        cell.questionLabel.text = question["question"] as? String
+        if let possibleAnswers = question["answers"] as? Array<String>{
+            for index in 0..<possibleAnswers.count {
+                cell.answerButtons[index].setTitle(possibleAnswers[index], for : .normal)
+            }
+        }
         
         return cell
     }
+}
+
+extension ExerciseTableViewCell : ScroeCellDelegate{
+    func scoreCell(_ cell: ScoreCollectionViewCell, didTapTryAgainExercise exercise: Array<Dictionary<String, Any>>) {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: false)
+        collectionView.reloadData()
+    }
+    
+    func scoreCell(_ cell: ScoreCollectionViewCell, didTapShareExercise exercise: Array<Dictionary<String, Any>>) {
+        delegate?.exerciseCell(self, didReceiveShareFor: exercise, onScroeCell: cell)
+    }
+    
+}
+
+extension ExerciseTableViewCell : QuestioncellDelegate{
+    func questionCell(_ cell: QuestionCollectionViewCell, didTapAnswerButton button: UIButton, forQuestion question: Dictionary<String, Any>) {
+        let indexPath = collectionView.indexPath(for: cell)!
+        let nextIndex = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+        if indexPath.row < questions.count {
+            collectionView.scrollToItem(at: nextIndex, at: .centeredHorizontally, animated: false)
+        }
+        
+        var answerCorrect : Bool = false
+        if let correctAnswer = question["correctAnswer"] as? String, let answer = button.titleLabel?.text {
+            answerCorrect = correctAnswer == answer
+        }
+        delegate?.exerciseCell(self, receivedAnswer: answerCorrect, forQuestion: question)
+    }
+    
+    
 }

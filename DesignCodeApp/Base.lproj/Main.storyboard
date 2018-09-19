@@ -1070,7 +1070,7 @@ design and code an iOS 11 app.</string>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Question Cell" id="ftR-h8-QAC">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Question Cell" id="ftR-h8-QAC" customClass="QuestionCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="549.66666666666663"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1102,6 +1102,9 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
+                                                                                        <connections>
+                                                                                            <action selector="didTapAnswerButton:" destination="ftR-h8-QAC" eventType="touchUpInside" id="YYO-Bz-FhV"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-fb-iKu">
                                                                                         <rect key="frame" x="0.0" y="60" width="305" height="60"/>
@@ -1110,6 +1113,9 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
+                                                                                        <connections>
+                                                                                            <action selector="didTapAnswerButton:" destination="ftR-h8-QAC" eventType="touchUpInside" id="q3b-nf-TgR"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-Tf-GOB">
                                                                                         <rect key="frame" x="0.0" y="120.00000000000003" width="305" height="60"/>
@@ -1118,6 +1124,9 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
+                                                                                        <connections>
+                                                                                            <action selector="didTapAnswerButton:" destination="ftR-h8-QAC" eventType="touchUpInside" id="URL-yM-LCd"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-fb-go4">
                                                                                         <rect key="frame" x="0.0" y="180.00000000000003" width="305" height="60"/>
@@ -1126,6 +1135,9 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
+                                                                                        <connections>
+                                                                                            <action selector="didTapAnswerButton:" destination="ftR-h8-QAC" eventType="touchUpInside" id="LlZ-fd-dYx"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-kY-CSj">
                                                                                         <rect key="frame" x="0.0" y="240" width="305" height="60"/>
@@ -1134,6 +1146,9 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
+                                                                                        <connections>
+                                                                                            <action selector="didTapAnswerButton:" destination="ftR-h8-QAC" eventType="touchUpInside" id="BfT-b5-kwc"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1218,8 +1233,16 @@ design and code an iOS 11 app.</string>
                                                         <constraint firstItem="dIc-fK-I4M" firstAttribute="top" secondItem="ftR-h8-QAC" secondAttribute="topMargin" constant="20" id="kOI-Wg-mxu"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="dIc-fK-I4M" secondAttribute="trailing" constant="20" id="uNa-tF-qLr"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="questionLabel" destination="k6H-3c-Yte" id="Vc9-V9-g0O"/>
+                                                        <outletCollection property="answerButtons" destination="aBw-EJ-WPN" collectionClass="NSMutableArray" id="V7B-H4-31u"/>
+                                                        <outletCollection property="answerButtons" destination="vB6-fb-iKu" collectionClass="NSMutableArray" id="iMq-0E-Lih"/>
+                                                        <outletCollection property="answerButtons" destination="KCo-Tf-GOB" collectionClass="NSMutableArray" id="fn2-7h-7I4"/>
+                                                        <outletCollection property="answerButtons" destination="6Ce-fb-go4" collectionClass="NSMutableArray" id="8of-et-hCF"/>
+                                                        <outletCollection property="answerButtons" destination="GFx-kY-CSj" collectionClass="NSMutableArray" id="TFZ-dL-IOy"/>
+                                                    </connections>
                                                 </collectionViewCell>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Score Cell" id="Ac5-8R-TLM">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Score Cell" id="Ac5-8R-TLM" customClass="ScoreCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                     <rect key="frame" x="387" y="0.0" width="377" height="549.66666666666663"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1327,6 +1350,9 @@ design and code an iOS 11 app.</string>
                                                                                                             <real key="value" value="5"/>
                                                                                                         </userDefinedRuntimeAttribute>
                                                                                                     </userDefinedRuntimeAttributes>
+                                                                                                    <connections>
+                                                                                                        <action selector="tryAgainButtonTapped:" destination="Ac5-8R-TLM" eventType="touchUpInside" id="yxO-Tv-0Z2"/>
+                                                                                                    </connections>
                                                                                                 </button>
                                                                                             </subviews>
                                                                                             <constraints>
@@ -1366,6 +1392,9 @@ design and code an iOS 11 app.</string>
                                                                                                             <real key="value" value="5"/>
                                                                                                         </userDefinedRuntimeAttribute>
                                                                                                     </userDefinedRuntimeAttributes>
+                                                                                                    <connections>
+                                                                                                        <action selector="shareButtonTapped:" destination="Ac5-8R-TLM" eventType="touchUpInside" id="YHp-yr-ito"/>
+                                                                                                    </connections>
                                                                                                 </button>
                                                                                             </subviews>
                                                                                             <constraints>
@@ -1443,6 +1472,10 @@ design and code an iOS 11 app.</string>
                                                         <constraint firstItem="s7U-BO-dTL" firstAttribute="top" secondItem="Ac5-8R-TLM" secondAttribute="topMargin" constant="20" id="DYq-m0-eHn"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="s7U-BO-dTL" secondAttribute="trailing" constant="20" id="tCw-Ya-Ymn"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="percentageLabel" destination="dP4-lm-Y1h" id="WAT-pg-8AZ"/>
+                                                        <outlet property="percentageView" destination="9CZ-wv-4BI" id="BTz-LD-taN"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
