@@ -9,6 +9,7 @@ target 'DesignCodeApp' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'Alamofire', '~> 4.7'
   pod 'ViewAnimator'
+  pod 'TPKeyboardAvoiding'
 
 end
 
@@ -18,3 +19,5 @@ post_install do |installer|
     config.build_settings.delete('CODE_SIGNING_REQUIRED')
   end
 end
+
+

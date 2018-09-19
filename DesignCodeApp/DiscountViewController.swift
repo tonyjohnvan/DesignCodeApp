@@ -11,6 +11,11 @@ import UIKit
 class DiscountViewController: UIViewController {
     @IBOutlet var panToClose: InteractionPanToClose!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        panToClose.animateDialogAppear()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

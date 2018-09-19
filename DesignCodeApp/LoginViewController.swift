@@ -1,5 +1,5 @@
 //
-//  PurchaseViewController.swift
+//  LoginViewController.swift
 //  DesignCodeApp
 //
 //  Created by Fan Zhang on 9/18/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PurchaseViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet var panToClose: InteractionPanToClose!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -19,8 +19,8 @@ class PurchaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        panToClose.setGestureRecognizer()
         // Do any additional setup after loading the view.
+        panToClose.setGestureRecognizer()
     }
 
     override func didReceiveMemoryWarning() {

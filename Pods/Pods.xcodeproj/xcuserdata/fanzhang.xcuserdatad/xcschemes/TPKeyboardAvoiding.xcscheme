@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB04006AFA0E35DB96143D1F69030757"
-               BlueprintName = "Spring"
+               BlueprintIdentifier = "5955116ED01E4CB5F95D6F06553929CA"
+               BlueprintName = "TPKeyboardAvoiding"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Spring.framework">
+               BuildableName = "TPKeyboardAvoiding.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
