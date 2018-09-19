@@ -452,12 +452,12 @@ design and code an iOS 11 app.</string>
                     <navigationItem key="navigationItem" id="BMo-xt-EPB">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Logo-DesignCode" id="Qlr-l4-KIm"/>
-                        <view key="titleView" contentMode="scaleToFill" id="y47-CN-GTH">
-                            <rect key="frame" x="127.66666666666669" y="8" width="120" height="28"/>
+                        <view key="titleView" clipsSubviews="YES" contentMode="scaleToFill" id="y47-CN-GTH" customClass="DesignableView" customModule="Spring">
+                            <rect key="frame" x="122.66666666666669" y="8" width="130" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LN-6Z-ji2">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -469,13 +469,24 @@ design and code an iOS 11 app.</string>
                                             <integer key="value" value="14"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <segue destination="61q-7K-MQl" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="WsZ-eH-YhW"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="JQK-rx-3aQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="4Qz-Cl-bTO" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Oje-J2-uaO"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="2000"/>
@@ -500,11 +511,11 @@ design and code an iOS 11 app.</string>
             <objects>
                 <viewController id="F2h-Iq-NJL" customClass="SectionViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4P-S9-rY1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-zk-ykD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-fB-Afd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
@@ -603,7 +614,7 @@ design and code an iOS 11 app.</string>
                                 <viewLayoutGuide key="safeArea" id="mDA-NL-RQV"/>
                             </scrollView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wys-tU-A0C">
-                                <rect key="frame" x="319" y="160" width="36" height="36"/>
+                                <rect key="frame" x="319" y="64" width="36" height="36"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sxu-0t-7ef">
                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1860,7 +1871,7 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="6702" y="462"/>
+            <point key="canvasLocation" x="118" y="470"/>
         </scene>
         <!--Discount-->
         <scene sceneID="rAV-IO-5rz">
@@ -2133,7 +2144,7 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="7695" y="463"/>
+            <point key="canvasLocation" x="1110" y="471"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9pt-zF-12r">
@@ -2354,7 +2365,7 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="8661.6000000000004" y="460.34482758620692"/>
+            <point key="canvasLocation" x="3870" y="-1176"/>
         </scene>
         <!--Testimonial View Controller-->
         <scene sceneID="LVe-by-7rs">
@@ -2694,6 +2705,7 @@ design and code an iOS 11 app.</string>
         <image name="ios11" width="2880" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ASw-et-adt"/>
+        <segue reference="Oje-J2-uaO"/>
+        <segue reference="Q3R-RY-9En"/>
     </inferredMetricsTieBreakers>
 </document>
