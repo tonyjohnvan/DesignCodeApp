@@ -1092,11 +1092,11 @@ design and code an iOS 11 app.</string>
                                                                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JCJ-5n-6BM">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JCJ-5n-6BM">
                                                                                 <rect key="frame" x="0.0" y="131.66666666666663" width="305" height="300"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-EJ-WPN">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="266" height="60"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
@@ -1107,7 +1107,7 @@ design and code an iOS 11 app.</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-fb-iKu">
-                                                                                        <rect key="frame" x="0.0" y="60" width="305" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="60" width="266" height="60"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
@@ -1118,7 +1118,7 @@ design and code an iOS 11 app.</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-Tf-GOB">
-                                                                                        <rect key="frame" x="0.0" y="120.00000000000003" width="305" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="120.00000000000003" width="266" height="60"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
@@ -1129,7 +1129,7 @@ design and code an iOS 11 app.</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-fb-go4">
-                                                                                        <rect key="frame" x="0.0" y="180.00000000000003" width="305" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="180.00000000000003" width="266" height="60"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
@@ -1140,7 +1140,7 @@ design and code an iOS 11 app.</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-kY-CSj">
-                                                                                        <rect key="frame" x="0.0" y="240" width="305" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="240" width="266" height="60"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
@@ -1296,6 +1296,9 @@ design and code an iOS 11 app.</string>
                                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                                                     <real key="value" value="0.25"/>
                                                                                                 </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                                    <integer key="value" value="14"/>
+                                                                                                </userDefinedRuntimeAttribute>
                                                                                             </userDefinedRuntimeAttributes>
                                                                                         </view>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-lm-Y1h">
@@ -1311,12 +1314,22 @@ design and code an iOS 11 app.</string>
                                                                                         <constraint firstItem="9CZ-wv-4BI" firstAttribute="centerY" secondItem="djK-cW-Q6h" secondAttribute="centerY" id="Vod-CU-rGp"/>
                                                                                         <constraint firstItem="dP4-lm-Y1h" firstAttribute="centerX" secondItem="djK-cW-Q6h" secondAttribute="centerX" id="ruh-wE-e8d"/>
                                                                                     </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="14"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </view>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="180" id="m2Z-Ex-f57"/>
                                                                                     <constraint firstAttribute="height" constant="180" id="qdN-lU-4Lk"/>
                                                                                 </constraints>
                                                                                 <blurEffect style="extraLight"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <integer key="value" value="14"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </visualEffectView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You took the exercise 3 times. Your average time is 30 seconds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-q3-3ks">
                                                                                 <rect key="frame" x="20" y="373.33333333333331" width="265" height="38.333333333333314"/>
@@ -1364,7 +1377,7 @@ design and code an iOS 11 app.</string>
                                                                                         </view>
                                                                                         <blurEffect style="dark"/>
                                                                                         <userDefinedRuntimeAttributes>
-                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                                 <integer key="value" value="10"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
@@ -1406,7 +1419,7 @@ design and code an iOS 11 app.</string>
                                                                                         </view>
                                                                                         <blurEffect style="dark"/>
                                                                                         <userDefinedRuntimeAttributes>
-                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                                 <integer key="value" value="10"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
