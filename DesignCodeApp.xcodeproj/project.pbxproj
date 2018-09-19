@@ -19,6 +19,8 @@
 		BE03DD5B2151B86000E4C336 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03DD5A2151B86000E4C336 /* DiscountViewController.swift */; };
 		BE03DD5F2151D74600E4C336 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03DD5E2151D74600E4C336 /* UILabel+Inspectable.swift */; };
 		BE5BBE7F2151817A00702DD3 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BBE7E2151817A00702DD3 /* InteractionPanToClose.swift */; };
+		BE7F1D42215208D50034AAC4 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */; };
+		BE7F1D4421520C1F0034AAC4 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F1D4321520C1F0034AAC4 /* ExerciseDialogViewController.swift */; };
 		BE95E000214B5B8900391597 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */; };
 		BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */; };
 		BE95E004214B62F900391597 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95E003214B62F900391597 /* SectionViewController.swift */; };
@@ -31,6 +33,7 @@
 		BEDFE989214E06E2001E1D53 /* DismissSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFE988214E06E2001E1D53 /* DismissSectionViewController.swift */; };
 		BEFDD1972151F7830091B1D0 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFDD1962151F7830091B1D0 /* MoreViewController.swift */; };
 		BEFDD1992151F8D90091B1D0 /* UILabel+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFDD1982151F8D90091B1D0 /* UILabel+Animate.swift */; };
+		BEFDD19F2152070A0091B1D0 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFDD19E2152070A0091B1D0 /* ExerciseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,8 @@
 		BE03DD5A2151B86000E4C336 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		BE03DD5E2151D74600E4C336 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		BE5BBE7E2151817A00702DD3 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
+		BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
+		BE7F1D4321520C1F0034AAC4 /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
 		BE95DFFF214B5B8900391597 /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
 		BE95E001214B5BAE00391597 /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE95E003214B62F900391597 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		BEDFE988214E06E2001E1D53 /* DismissSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSectionViewController.swift; sourceTree = "<group>"; };
 		BEFDD1962151F7830091B1D0 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		BEFDD1982151F8D90091B1D0 /* UILabel+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animate.swift"; sourceTree = "<group>"; };
+		BEFDD19E2152070A0091B1D0 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				BE95E009214CC65000391597 /* BookmarkTableViewCell.swift */,
 				BE95E005214CB21900391597 /* ChaptersViewController.swift */,
 				BE007FC1214A2D49001205D7 /* Data.swift */,
+				BEFDD19E2152070A0091B1D0 /* ExerciseTableViewCell.swift */,
+				BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */,
+				BE7F1D4321520C1F0034AAC4 /* ExerciseDialogViewController.swift */,
 				BE03DD5A2151B86000E4C336 /* DiscountViewController.swift */,
 				BEDFE988214E06E2001E1D53 /* DismissSectionViewController.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
@@ -266,6 +275,7 @@
 				BEA4E0492151E19A000154B0 /* LoginViewController.swift in Sources */,
 				9698CD211FBB5DE000501C47 /* HomeViewController.swift in Sources */,
 				BE95E008214CBA9200391597 /* BookmarksTableViewController.swift in Sources */,
+				BEFDD19F2152070A0091B1D0 /* ExerciseTableViewCell.swift in Sources */,
 				BEDFE987214DC4A0001E1D53 /* PresentSectionViewController.swift in Sources */,
 				BE007FC4214A2DBF001205D7 /* SectionCollectionViewCell.swift in Sources */,
 				BE5BBE7F2151817A00702DD3 /* InteractionPanToClose.swift in Sources */,
@@ -273,10 +283,12 @@
 				BE95E004214B62F900391597 /* SectionViewController.swift in Sources */,
 				BEFDD1992151F8D90091B1D0 /* UILabel+Animate.swift in Sources */,
 				BE95E00A214CC65000391597 /* BookmarkTableViewCell.swift in Sources */,
+				BE7F1D42215208D50034AAC4 /* ExercisesTableViewController.swift in Sources */,
 				BE03DD5F2151D74600E4C336 /* UILabel+Inspectable.swift in Sources */,
 				BE95E000214B5B8900391597 /* TestimonialViewController.swift in Sources */,
 				BEFDD1972151F7830091B1D0 /* MoreViewController.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
+				BE7F1D4421520C1F0034AAC4 /* ExerciseDialogViewController.swift in Sources */,
 				BEDFE989214E06E2001E1D53 /* DismissSectionViewController.swift in Sources */,
 				9698CD271FBB5DE000501C47 /* DesignCodeApp.xcdatamodeld in Sources */,
 				BE95E002214B5BAE00391597 /* TestimonialCollectionViewCell.swift in Sources */,

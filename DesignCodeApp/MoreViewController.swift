@@ -27,11 +27,15 @@ class MoreViewController: UIViewController {
         progress2Label.animateTo(progress[1])
         progress3Label.animateTo(progress[2])
         
-        UIView.animate(withDuration: 1.0) {
-            self.progress1View.progress = Double(progress[0]) / 100
-            self.progress2View.progress = Double(progress[1]) / 100
-            self.progress3View.progress = Double(progress[2]) / 100
-        }
+        progress1View.animateTo2(progress[0])
+        progress2View.animateTo2(progress[1])
+        progress3View.animateTo2(progress[2])
+        
+//        UIView.animate(withDuration: 1.0) {
+//            self.progress1View.progress = Double(progress[0]) / 100
+//            self.progress2View.progress = Double(progress[1]) / 100
+//            self.progress3View.progress = Double(progress[2]) / 100
+//        }
         
     }
 
@@ -53,11 +57,17 @@ class MoreViewController: UIViewController {
 
 }
 
-//extension RingProgressView {
-//    func animateTo(_ number : Int){
-//        CATransaction.begin()
-//        CATransaction.setAnimationDuration(1.0)
-//        self.progress = Double(number) / 100
-//        CATransaction.commit()
-//    }
-//}
+extension RingProgressView {
+    func animateTo(_ number : Int){
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(1.0)
+        self.progress = Double(number) / 100
+        CATransaction.commit()
+    }
+    
+    func animateTo2(_ number : Int){
+        UIView.animate(withDuration: 1.5) {
+            self.progress = Double(number) / 100
+        }
+    }
+}
