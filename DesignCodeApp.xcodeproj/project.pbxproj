@@ -23,6 +23,7 @@
 		BE5B7DEB2153EC9900221A76 /* Embed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5B7DEA2153EC9900221A76 /* Embed.storyboard */; };
 		BE5B7DEE2153F2B400221A76 /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5B7DED2153F2B400221A76 /* Dialog.storyboard */; };
 		BE5B7DF12153F47000221A76 /* Section.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5B7DF02153F47000221A76 /* Section.storyboard */; };
+		BE5B7DF42154245000221A76 /* CustomAmbienceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B7DF32154245000221A76 /* CustomAmbienceLabel.swift */; };
 		BE5BBE7F2151817A00702DD3 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BBE7E2151817A00702DD3 /* InteractionPanToClose.swift */; };
 		BE7F1D42215208D50034AAC4 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */; };
 		BE7F1D4421520C1F0034AAC4 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F1D4321520C1F0034AAC4 /* ExerciseDialogViewController.swift */; };
@@ -64,6 +65,7 @@
 		BE5B7DEA2153EC9900221A76 /* Embed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Embed.storyboard; sourceTree = "<group>"; };
 		BE5B7DED2153F2B400221A76 /* Dialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dialog.storyboard; sourceTree = "<group>"; };
 		BE5B7DF02153F47000221A76 /* Section.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Section.storyboard; sourceTree = "<group>"; };
+		BE5B7DF32154245000221A76 /* CustomAmbienceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAmbienceLabel.swift; sourceTree = "<group>"; };
 		BE5BBE7E2151817A00702DD3 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
 		BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		BE7F1D4321520C1F0034AAC4 /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				BE7F1D41215208D50034AAC4 /* ExercisesTableViewController.swift */,
 				BE0C44FD2152BB05008B65C7 /* QuestionCollectionViewCell.swift */,
 				BE4DF3242152DA5400F1F97C /* ScoreCollectionViewCell.swift */,
+				BE5B7DF32154245000221A76 /* CustomAmbienceLabel.swift */,
 				BEDFE988214E06E2001E1D53 /* DismissSectionViewController.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
@@ -277,6 +280,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Ambience/Ambience.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
@@ -285,6 +289,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ambience.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
@@ -323,6 +328,7 @@
 				BEA4E0492151E19A000154B0 /* LoginViewController.swift in Sources */,
 				9698CD211FBB5DE000501C47 /* HomeViewController.swift in Sources */,
 				BE95E008214CBA9200391597 /* BookmarksTableViewController.swift in Sources */,
+				BE5B7DF42154245000221A76 /* CustomAmbienceLabel.swift in Sources */,
 				BEFDD19F2152070A0091B1D0 /* ExerciseTableViewCell.swift in Sources */,
 				BE0C44FE2152BB05008B65C7 /* QuestionCollectionViewCell.swift in Sources */,
 				BE4DF3252152DA5400F1F97C /* ScoreCollectionViewCell.swift in Sources */,

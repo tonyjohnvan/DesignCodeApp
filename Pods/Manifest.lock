@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - Ambience (0.1.1)
   - MKRingProgressView (2.0.1)
   - Spring (1.0.5)
   - TPKeyboardAvoiding (1.3.2)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Ambience
   - MKRingProgressView
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - TPKeyboardAvoiding
@@ -15,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Ambience
     - MKRingProgressView
     - TPKeyboardAvoiding
     - ViewAnimator
@@ -30,11 +33,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Ambience: 7b65da120d270b6a2a2591a3e2ab08871363f43d
   MKRingProgressView: a2adeddfff0ea03f0fb7f8b108f3f77176db3bb5
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
   ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
 
-PODFILE CHECKSUM: aae2d5cdcd626d4bde3e25868fbee78b6a6d5373
+PODFILE CHECKSUM: 16c3aa79575d07577cf3e347e9c82f0bf4fcaac7
 
 COCOAPODS: 1.5.3
