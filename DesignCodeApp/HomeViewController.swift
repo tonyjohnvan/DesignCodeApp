@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
     let presentSectionViewController = PresentSectionViewController()
     let dismissSectionViewController = DismissSectionViewController()
     
+    var sections : Array<Section> = ContentAPI.shared.sections
+    
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
         
@@ -138,9 +140,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
         let section = sections[indexPath.row]
-        cell.titleLabel.text = section["title"]
-        cell.captionLabel.text = section["caption"]
-        cell.coverImageView.image = UIImage(named: section["image"]!)
+        cell.titleLabel.text = section.title
+        cell.captionLabel.text = section.caption
+        cell.coverImageView.image = UIImage(named: section.imageName)
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         return cell
     }
