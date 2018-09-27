@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarksTableViewController: UITableViewController {
 
-    var bookmarks : Array<Dictionary<String,String>> = ContentAPI.shared.bookmarks
+    var bookmarks : Array<Bookmarks> = ContentAPI.shared.bookmarks
     
     var sections : Array<Section> = ContentAPI.shared.sections
     
@@ -55,11 +55,11 @@ class BookmarksTableViewController: UITableViewController {
         
         let bookmark = bookmarks[indexPath.row]
         
-        cell.chapterNumberLabel.text = bookmark["chapter"]
-        cell.chapterTitleLabel.text = bookmark["section"]!.uppercased()
-        cell.titleLabel.text = bookmark["part"]
-        cell.bodyLabel.text = bookmark["content"]
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + bookmark["type"]!)
+        cell.chapterNumberLabel.text = bookmark.chapterNumber
+        cell.chapterTitleLabel.text = bookmark.sectionTitle.uppercased()
+        cell.titleLabel.text = bookmark.partHeading
+        cell.bodyLabel.text = bookmark.content
+        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (bookmark.typeName ?? "text"))
         
         
 //        cell.textLabel?.text = bookmarks[indexPath.row]["content"]
