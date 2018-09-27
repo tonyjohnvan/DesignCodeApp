@@ -11,7 +11,7 @@ import UIKit
 class ChaptersViewController: UIViewController {
     @IBOutlet weak var chapter1CollectionView: UICollectionView!
     
-    var sections : Array<Section> = ContentAPI.shared.sections
+    var sections : Array<SectionCodable> = ContentAPI.shared.sections
     
     override func viewDidLoad() {
         super.viewDidLoad()

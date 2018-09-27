@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     let presentSectionViewController = PresentSectionViewController()
     let dismissSectionViewController = DismissSectionViewController()
     
-    var sections : Array<Section> = ContentAPI.shared.sections
+    var sections : Array<SectionCodable> = ContentAPI.shared.sections
     
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"

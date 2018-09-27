@@ -20,8 +20,8 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var subheadVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var closeVisualEffectView: UIVisualEffectView!
     
-    var section: Section!
-    var sections: Array<Section>!
+    var section: SectionCodable!
+    var sections: Array<SectionCodable>!
     var indexPath: IndexPath!
     
     override func viewDidLoad() {
