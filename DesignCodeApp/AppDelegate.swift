@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            ])
 //
         
-//        RealmManager.loadFromData()
+        RealmManager.updateContent()
         return true
     }
 
