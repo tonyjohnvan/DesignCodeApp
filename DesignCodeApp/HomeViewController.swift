@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,7 +25,7 @@ class HomeViewController: UIViewController {
     let presentSectionViewController = PresentSectionViewController()
     let dismissSectionViewController = DismissSectionViewController()
     
-    var sections : Array<Section> = ContentAPI.shared.sections
+    var sections : Results<Section> {return RealmManager.sections}
     
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"

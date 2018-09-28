@@ -12,6 +12,7 @@ target 'DesignCodeApp' do
   pod 'TPKeyboardAvoiding'
   pod 'MKRingProgressView'
   pod 'Ambience'
+  pod 'RealmSwift'
 
 end
 

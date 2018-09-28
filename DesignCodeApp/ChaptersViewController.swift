@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ChaptersViewController: UIViewController {
     @IBOutlet weak var chapter1CollectionView: UICollectionView!
     
-    var sections : Array<Section> = ContentAPI.shared.sections
+    //var sections : Array<Section> = ContentAPI.shared.sections
+    var sections : Results<Section> {return RealmManager.sections}
     
     override func viewDidLoad() {
         super.viewDidLoad()

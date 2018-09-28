@@ -2,6 +2,11 @@ PODS:
   - Alamofire (4.7.3)
   - Ambience (0.1.1)
   - MKRingProgressView (2.0.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
   - Spring (1.0.5)
   - TPKeyboardAvoiding (1.3.2)
   - ViewAnimator (2.1.2)
@@ -10,6 +15,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Ambience
   - MKRingProgressView
+  - RealmSwift
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - TPKeyboardAvoiding
   - ViewAnimator
@@ -19,6 +25,8 @@ SPEC REPOS:
     - Alamofire
     - Ambience
     - MKRingProgressView
+    - Realm
+    - RealmSwift
     - TPKeyboardAvoiding
     - ViewAnimator
 
@@ -35,10 +43,12 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Ambience: 7b65da120d270b6a2a2591a3e2ab08871363f43d
   MKRingProgressView: a2adeddfff0ea03f0fb7f8b108f3f77176db3bb5
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
   ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
 
-PODFILE CHECKSUM: 16c3aa79575d07577cf3e347e9c82f0bf4fcaac7
+PODFILE CHECKSUM: 55381e1cd866ab2abda190c265d5b12add161425
 
 COCOAPODS: 1.5.3

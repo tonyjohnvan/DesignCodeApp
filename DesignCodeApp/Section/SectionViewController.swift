@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SectionViewController: UIViewController {
     @IBOutlet weak var titleLable: UILabel!
@@ -21,7 +22,7 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var closeVisualEffectView: UIVisualEffectView!
     
     var section: Section!
-    var sections: Array<Section>!
+    var sections: Results<Section>!
     var indexPath: IndexPath!
     
     override func viewDidLoad() {
