@@ -21,10 +21,12 @@ class HomeViewController: UIViewController {
     
     var isStatusBarHidden = false
     
+    var sections : Array<Section> { return CoreDataManager.shared.sections }
+    
     let presentSectionViewController = PresentSectionViewController()
     let dismissSectionViewController = DismissSectionViewController()
     
-    var sections : Array<SectionCodable> = ContentAPI.shared.sections
+    //var sections : Array<SectionCodable> = ContentAPI.shared.sections
     
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
@@ -142,7 +144,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        cell.coverImageView.image = UIImage(named: section.imageName)
+        cell.coverImageView.image = UIImage(named: section.imageName!)
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         return cell
     }

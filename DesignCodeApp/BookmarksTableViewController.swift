@@ -10,9 +10,11 @@ import UIKit
 
 class BookmarksTableViewController: UITableViewController {
 
-    var bookmarks : Array<PartCodable> = ContentAPI.shared.bookmarks
+    //var bookmarks : Array<PartCodable> = ContentAPI.shared.bookmarks
+    var bookmarks : Array<Bookmark> { return CoreDataManager.shared.bookmarks }
     
-    var sections : Array<SectionCodable> = ContentAPI.shared.sections
+    //var sections : Array<SectionCodable> = ContentAPI.shared.sections
+    var sections : Array<Section> { return CoreDataManager.shared.sections }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -55,11 +57,14 @@ class BookmarksTableViewController: UITableViewController {
         
         let bookmark = bookmarks[indexPath.row]
         
-        cell.chapterNumberLabel.text = bookmark.chapterNumber
-        cell.chapterTitleLabel.text = bookmark.sectionTitle.uppercased()
-        cell.titleLabel.text = bookmark.title
-        cell.bodyLabel.text = bookmark.content
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (bookmark.typeName ?? "text"))
+        let part = bookmark.part!
+        let section = bookmark.section!
+        
+        cell.chapterNumberLabel.text = section.chapterNumber
+        cell.chapterTitleLabel.text = part.title!.uppercased()
+        cell.titleLabel.text = section.title
+        cell.bodyLabel.text = part.content
+        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (part.type ?? "text"))
         
         
 //        cell.textLabel?.text = bookmarks[indexPath.row]["content"]
@@ -88,17 +93,23 @@ class BookmarksTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.beginUpdates()
+            
+            let bookmark = bookmarks[indexPath.row]
+            CoreDataManager.shared.remove(bookmark)
+            tableView.deleteRows(at: [indexPath], with: .top)
+            
+            tableView.endUpdates()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
